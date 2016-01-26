@@ -4,7 +4,57 @@
 
 {{$content}}
 
-{{raysParentsName}}
+<main class="elements-index" id="content" role="main">
+
+    {{>breadcrumb}}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge">
+                Star Wars Fans
+            </h1>
+
+            <p class="lede">
+                Thank you for giving your feedback.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <p class="lede">
+                Here are the answers you gave.
+            </p>
+            <dl>
+                <div class="panel panel-border-wide">
+                    <dt>What is your favourite Star Wars film? </dt>
+                    <dd>{{data.favouriteFilm}}</dd>
+                </div>
+
+                <div class="panel panel-border-wide">
+                    <dt>Which of these characters are from the Star Wars universe?</dt>
+                    <dd>{{data.starWarsUniverseCharacters}}</dd>
+                </div>
+
+
+                <div class="panel panel-border-wide">
+                    <dt>Do you know who Rey’s parents are?</dt>
+                    <dd>{{data.knowsReysParents}}</dd>
+                </div>
+
+
+                <div class="panel panel-border-wide">
+                    <dt>Who are Rey’s parents? </dt>
+                    <dd>{{data.reysParentsName}}</dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+
+</main><!-- / #content -->
+
 
 {{/content}}
 

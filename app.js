@@ -3,8 +3,7 @@ var express = require('express'),
     app = express(),
     port = (process.env.PORT || 3000),
     mongoose = require('mongoose'),
-    bodyParser = require('body-parser'),
-    QuestionnaireCtrl = require('./server/controllers/questionnaire.server.controller.js')
+    bodyParser = require('body-parser');
 
 mongoose.connect('mongodb://localhost/starwars');
 
@@ -26,10 +25,6 @@ app.use(express.urlencoded()); // to support URL-encoded bodies
 
 // routes (found in routes.js)
 routes.bind(app, '/public/');
-
-app.post('/api/questionnaire', function (req, res) {
-    QuestionnaireCtrl.create(req,res);
-});
 
 // start the app
 

@@ -6,8 +6,7 @@
 
 <main class="elements-index" id="content" role="main">
 
-  <!--{{>phase_banner}}-->
-  <!--{{>breadcrumb}}-->
+  {{>breadcrumb}}
 
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -38,40 +37,40 @@
             <div class="form-group">
               <p class="form-label">Which of these characters are from the Star Wars universe?</p>
               <label class="block-label" for="spock">
-                <input id="spock" name="favouriteCharacters" type="checkbox" value="Spock">
+                <input id="spock" name="starWarsUniverseCharacters" type="checkbox" value="Spock">
                 Spock
               </label>
               <label class="block-label" for="darth-vader">
-                <input id="darth-vader" name="favouriteCharacters" type="checkbox" value="Darth Vader">
+                <input id="darth-vader" name="starWarsUniverseCharacters" type="checkbox" value="Darth Vader">
                 Darth Vader
               </label>
               <label class="block-label" for="captain-kirk">
-                <input id="captain-kirk" name="favouriteCharacters" type="checkbox" value="Captain Kirk">
+                <input id="captain-kirk" name="starWarsUniverseCharacters" type="checkbox" value="Captain Kirk">
                 Captain Kirk
               </label>
               <label class="block-label" for="luke-skywalker">
-                <input id="luke-skywalker" name="favouriteCharacters" type="checkbox" value="Luke Skywalker">
+                <input id="luke-skywalker" name="starWarsUniverseCharacters" type="checkbox" value="Luke Skywalker">
                 Luke Skywalker
               </label>
               <label class="block-label" for="rey-mysterio">
-                <input id="rey-mysterio" name="favouriteCharacters" type="checkbox" value="Rey Mysterio">
-                Captain Kirk
+                <input id="rey-mysterio" name="starWarsUniverseCharacters" type="checkbox" value="Rey Mysterio">
+                Rey Mysterio
               </label>
             </div>
 
             <div class="form-group">
               <p class="form-label">Do you know who Rey’s parents are?</p>
-              <label class="block-label" data-target="reveal-ray-parents" for="radio-answer-yes">
-                <input id="radio-answer-yes" type="radio" name="knowsRaysParents" value="true">
+              <label class="block-label" data-target="reveal-rey-parents" for="radio-answer-yes">
+                <input id="radio-answer-yes" type="radio" name="knowsReysParents" value="true">
                 Yes
               </label>
               <label class="block-label" for="radio-answer-no">
-                <input id="radio-answer-no" type="radio" name="knowsRaysParents" value="false">
+                <input id="radio-answer-no" type="radio" name="knowsReysParents" value="false">
                 No
               </label>
-              <div class="panel panel-border-narrow js-hidden" id="reveal-ray-parents">
+              <div class="panel panel-border-narrow js-hidden" id="reveal-rey-parents">
                 <label class="form-label" for="ray-parents">Who are Rey’s parents?</label>
-                <input class="form-control" name="raysParentsName" type="text" id="ray-parents">
+                <input class="form-control" name="reysParentsName" type="text" id="ray-parents">
               </div>
             </div>
 

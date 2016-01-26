@@ -1,3 +1,5 @@
+var QuestionnaireModel = require('./models/questionnaire.server.model.js');
+
 module.exports = {
   bind : function (app, assetPath) {
 
@@ -199,6 +201,25 @@ module.exports = {
         error = false;
       }
       res.render('examples/example_form_validation_multiple_questions', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name, 'fullName': fullName, 'niNo': niNo, 'error': error});
+    });
+
+    app.post('/api/questionnaire', function (req, res) {
+      var section = "thank-you";
+      var section_name = "Thank you";
+      var page_name = "Thank you";
+      var questionnaire = new QuestionnaireModel(req.body);
+
+      questionnaire.save(function(err) {
+        if (err) {
+          res.send(err);
+        } else {
+          res.render('thank-you', {'data':questionnaire,  'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name});
+        }
+      });
+    });
+
+    app.get('/thank-you', function (req, res) {
+      res.send(200);
     });
 
     // Redirect examples from /examples/ to /section/example-name-of-example
