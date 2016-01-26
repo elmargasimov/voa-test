@@ -3,8 +3,9 @@ var Schema = mongoose.Schema;
 
 var QuestionnaireSchema = new Schema({
     favouriteFilm: String,
-    favouriteCharacter: Array,
-    raysParents: String
+    favouriteCharacters: Array,
+    knowsRaysParents: Boolean,
+    raysParentsName: String
 });
 
 QuestionnaireSchema.pre('save', function(next) {

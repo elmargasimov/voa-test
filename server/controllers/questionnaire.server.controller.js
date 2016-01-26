@@ -10,7 +10,8 @@ function createForm(req, res) {
         if (err) {
             console.log(err);
         } else {
-            res.json(questionnaire);
+            console.log(questionnaire);
+            res.render('thank-you', questionnaire);
         }
     });
 }
