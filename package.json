@@ -10,6 +10,7 @@
     "public/sass/"
   ],
   "dependencies": {
+    "body-parser": "^1.14.2",
     "govuk_frontend_toolkit": "^4.6.0",
     "mongoose": "^4.3.7"
   },
