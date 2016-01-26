@@ -6,119 +6,86 @@
 
 <main class="elements-index" id="content" role="main">
 
-  {{>phase_banner}}
-  {{>breadcrumb}}
+  <!--{{>phase_banner}}-->
+  <!--{{>breadcrumb}}-->
 
   <div class="grid-row">
     <div class="column-two-thirds">
 
       <h1 class="heading-xlarge">
-        GOV.UK elements
+        Star Wars Fans
       </h1>
 
       <p class="lede">
-        This guide shows how to make your service look consistent with the rest of GOV.UK.
+        This questionnaire helps us identify your knowledge of Star Wars.
       </p>
 
     </div>
   </div>
 
   <div class="grid-row">
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/layout/">Layout</a></h2>
-      <p>
-        Grid unit proportions, gutters and spacing.
-      </p>
-
-    </div>
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/typography/">Typography</a></h2>
-      <p>
-        Headings, body text, links, lists, inset text, hidden text.
-      </p>
-
-    </div>
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/colour/">Colour</a></h2>
-      <p>
-        Colour contrast, Sass variables, colour palettes.
-      </p>
-
-    </div>
-  </div>
-
-  <div class="grid-row">
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/icons-images/">Icons and images</a></h2>
-      <p>
-        Icons and image ratios.
-      </p>
-
-    </div>
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/data/">Data</a></h2>
-      <p>
-        Data in a table, numeric tabular data, data visualisation.
-      </p>
-
-    </div>
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/buttons/">Buttons</a></h2>
-      <p>
-        Button text, button alignment, creating buttons.
-      </p>
-
-    </div>
-  </div>
-
-  <div class="grid-row">
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/form-elements/">Form elements</a></h2>
-      <p>
-        Form fields, labels, focus states, radio buttons, checkboxes.
-      </p>
-
-    </div>
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/errors/">Errors and validation</a></h2>
-      <p>
-        Summary boxes, highlighting errors in forms.
-      </p>
-
-    </div>
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/alpha-beta-banners/">Alpha and beta banners</a></h2>
-      <p>
-        How to create alpha and beta banners using the front-end toolkit.
-      </p>
-
-    </div>
-  </div>
-
-  <div class="grid-row divider">
     <div class="column-two-thirds">
+      <form name="starwars-form" id="starwars-form">
+          <fieldset>
 
-      <h3 class="heading-small">Looking for the styles?</h3>
-      <p>
-         The Sass files for <a href="https://github.com/alphagov/govuk_elements/tree/master/public/sass" rel="external">all the examples can be found on GitHub</a>.
-      </p>
+            <legend class="heading-large">The force is strong with this one</legend>
 
-      <h3 class="heading-small">Want to discuss these patterns?</h3>
-      <p>
-        <a href="https://designpatterns.hackpad.com/" rel="external">Discuss design patterns for GOV.UK services on our hackpad</a>.
-      </p>
+            <div class="form-group">
+              <label class="form-label" for="fav-film">What is your favourite Star Wars film?</label>
+              <input required class="form-control" name="favourite-film" id="fav-film" type="text">
+            </div>
 
+            <div class="form-group">
+              <p class="form-label">Which of these characters are from the Star Wars universe?</p>
+              <label class="block-label" for="spock">
+                <input id="spock" name="spock" type="checkbox" value="Spock">
+                Spock
+              </label>
+              <label class="block-label" for="darth-vader">
+                <input id="darth-vader" name="darth-vader" type="checkbox" value="Darth Vader">
+                Darth Vader
+              </label>
+              <label class="block-label" for="captain-kirk">
+                <input id="captain-kirk" name="captain-kirk" type="checkbox" value="Captain Kirk">
+                Captain Kirk
+              </label>
+              <label class="block-label" for="luke-skywalker">
+                <input id="luke-skywalker" name="luke-skywalker" type="checkbox" value="Luke Skywalker">
+                Luke Skywalker
+              </label>
+              <label class="block-label" for="rey-mysterio">
+                <input id="rey-mysterio" name="rey-mysterio" type="checkbox" value="Rey Mysterio">
+                Captain Kirk
+              </label>
+            </div>
+
+            <div class="form-group">
+              <p class="form-label">Do you know who Rey’s parents are?</p>
+              <label class="block-label" data-target="reveal-ray-parents" for="radio-indent-1">
+                <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">
+                Yes
+              </label>
+              <label class="block-label" for="radio-indent-2">
+                <input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">
+                No
+              </label>
+              <div class="panel panel-border-narrow js-hidden" id="reveal-ray-parents">
+                <label class="form-label" for="ray-parents">Who are Rey’s parents?</label>
+                <input class="form-control" name="ray-parents" type="text" id="ray-parents">
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="form-label invisible" for="submit">Submit</label>
+              <input required class="button button-start" name="submit" id="submit" type="submit">
+            </div>
+
+          </fieldset>
+      </form>
     </div>
   </div>
+
 
 </main><!-- / #content -->
 {{/content}}

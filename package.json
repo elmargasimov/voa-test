@@ -10,7 +10,8 @@
     "public/sass/"
   ],
   "dependencies": {
-    "govuk_frontend_toolkit": "^4.6.0"
+    "govuk_frontend_toolkit": "^4.6.0",
+    "mongoose": "^4.3.7"
   },
   "devDependencies": {
     "consolidate": "^0.10.0",
